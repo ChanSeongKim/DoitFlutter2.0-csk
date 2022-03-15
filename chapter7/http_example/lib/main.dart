@@ -100,19 +100,34 @@ class _HttpApp extends State<HttpApp> {
               itemBuilder:(context, index){
                 return Card(
                   child: Container(
-                    child: Column(
+                    child: Row(
                       children: <Widget>[
-                        Text(data![index]['title'].toString()),
+/*                        Text(data![index]['title'].toString()),
                         Text(data![index]['authors'].toString()),
                         Text(data![index]['sale_price'].toString()),
-                        Text(data![index]['status'].toString()),
+                        Text(data![index]['status'].toString()),*/
                         Image.network(
                           data![index]['thumbnail'],
                           height: 100,
                           width: 100,
                           fit: BoxFit.contain,
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Container(
+                              width: MediaQuery.of(context).size.width - 150,
+                              child: Text(
+                                data![index]['title'].toString(),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Text('author: ${data![index]['authors'].toString()}'),
+                            Text('price: ${data![index]['sale_price'].toString()}'),
+                            Text('status: ${data![index]['status'].toString()}'),
+                          ],
                         )
                       ],
+                      mainAxisAlignment: MainAxisAlignment.start,
                     )
                   )
                 );
