@@ -65,11 +65,14 @@ class _HttpApp extends State<HttpApp> {
 
   String result= '';
   List? data ;
+  TextEditingController?  _editingController;
+
 
   @override
   void initState(){
     super.initState() ;
     data = List.empty( growable: true) ;
+    _editingController = new TextEditingController();
   }
 
 
@@ -84,9 +87,15 @@ class _HttpApp extends State<HttpApp> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
+        // Here we take the value from the HttpApp object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: TextField(
+          controller: _editingController,
+          style: TextStyle(color: Colors.white),
+          keyboardType: TextInputType.text,
+          decoration: InputDecoration(hintText: 'Enter search keyword'),
+        ) ,
+          //Text(widget.title),
       ),
       body: Container(
         child: Center(
@@ -144,10 +153,14 @@ class _HttpApp extends State<HttpApp> {
     );
   }
   Future<String> getJSONData() async {
-    var url = 'https://dapi.kakao.com/v3/search/book?target=title&query=doit';
+    var url =
+        'https://dapi.kakao.com/v3/search/book?'
+        'target=title&query=${_editingController!.value.text}';
+
     var response = await http.get(Uri.parse(url) ,
         headers: {"Authorization": "KakaoAK bd0d95e63ad2adaafdd0748839cea3b9" });
     //print (response.body);
+    print( '_editingController!.value.text=${_editingController!.value.text}');
     setState(() {
       var dataConvertedToJSON = json.decode(response.body) ;
       List result = dataConvertedToJSON['documents'];
