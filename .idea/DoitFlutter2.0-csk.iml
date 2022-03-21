@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Chapter6/listview_example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter6/listview_example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter6/listview_example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/chapter7/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/chapter7/build" />
+      <excludeFolder url="file://$MODULE_DIR$/chapter7/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter6/tabbar_example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter6/tabbar_example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter6/tabbar_example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter4/widget_example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter4/widget_example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter4/widget_example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter4/image_font_add_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter4/image_font_add_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Chapter4/image_font_add_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/chapter7/http_example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/chapter7/http_example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/chapter7/http_example/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>
