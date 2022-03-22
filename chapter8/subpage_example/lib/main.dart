@@ -11,12 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'SubPage Example',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:FirstPage(title: 'FirstPage demo') ,
-      //const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {'/': (context) => FirstPage(title: 'FirstPage demo.'),
+          '/second': (context) => SecondPage()},
+/*      home:FirstPage(title: 'FirstPage demo') ,
+      //const MyHomePage(title: 'Flutter Demo Home Page'),*/
     );
   }
 }
@@ -35,7 +38,7 @@ class _FirstPage extends State<FirstPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sub Page Main'),
+        title: Text('Sub Page Main.'),
       ),
       body: Container(
         child: Center(
@@ -44,7 +47,8 @@ class _FirstPage extends State<FirstPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push( MaterialPageRoute(builder: (context)=>SecondPage() ));
+          //Navigator.of(context).push( MaterialPageRoute(builder: (context)=>SecondPage() ));
+          Navigator.of(context).pushNamed('/second');
         },
         child: Icon(Icons.add),
       ),
