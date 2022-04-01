@@ -1,0 +1,1230 @@
+Launching lib/main.dart on macOS in debug mode...
+Running pod install...                                           2,105ms
+CocoaPods' output:
+↳
+      Preparing
+
+    Analyzing dependencies
+
+    Inspecting targets to integrate
+      Using `ARCHS` setting to build architectures of target `Pods-Runner`: (``)
+
+    Fetching external sources
+    -> Fetching podspec for `FlutterMacOS` from `Flutter/ephemeral`
+    -> Fetching podspec for `sqflite` from `Flutter/ephemeral/.symlinks/plugins/sqflite/macos`
+
+Error output from CocoaPods:
+↳
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:212: [BUG] Segmentation fault at 0x0000000000000000
+    ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin20]
+
+    -- Crash Report log information --------------------------------------------
+       See Crash Report log file under the one of following:
+         * ~/Library/Logs/DiagnosticReports
+         * /Library/Logs/DiagnosticReports
+       for more details.
+    Don't forget to include the above Crash Report log file in bug reports.
+
+    -- Control frame information -----------------------------------------------
+    c:0013 p:---- s:0068 e:000067 CFUNC  :multi_perform
+    c:0012 p:0016 s:0062 e:000061 METHOD /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:212
+    c:0011 p:0030 s:0056 e:000055 METHOD /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:201
+    c:0010 p:0038 s:0050 e:000049 METHOD /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:50
+    c:0009 p:0009 s:0045 e:000044 METHOD /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/runnable.rb:15
+    c:0008 p:0004 s:0041 e:000040 METHOD /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/memoizable.rb:51 [FINISH]
+    c:0007 p:0008 s:0037 e:000035 METHOD /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_t
+    c:0006 p:0047 s:0028 e:000027 BLOCK  /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_t [FINISH]
+    c:0005 p:---- s:0022 e:000021 CFUNC  :loop
+    c:0004 p:0005 s:0018 e:000017 BLOCK  /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_t [FINISH]
+    c:0003 p:---- s:0015 e:000014 CFUNC  :catch
+    c:0002 p:0020 s:0010 e:000009 BLOCK  /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_t [FINISH]
+    c:0001 p:---- s:0003 e:000002 (none) [FINISH]
+
+    -- Ruby level backtrace information ----------------------------------------
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/memoizable.rb:51:in `run'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/runnable.rb:15:in `run'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:50:in `perform'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:201:in `run'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:212:in `trigger'
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:212:in `multi_perform'
+
+    -- Machine register context ------------------------------------------------
+     rax: 0xf5158d4cfa1e0ff3 rbx: 0x00007f9cb90725d0 rcx: 0x000070000b467860
+     rdx: 0x000000010a780010 rdi: 0x000070000b467620 rsi: 0x0000000000000000
+     rbp: 0x000070000b467400 rsp: 0x000070000b467390  r8: 0x000070000b4675f0
+      r9: 0x0000000000000000 r10: 0x0000000000000001 r11: 0x0000000108acd250
+     r12: 0x000000010a77f890 r13: 0x000070000b467620 r14: 0x000070000b467620
+     r15: 0x000070000b4675f0 rip: 0x000000010a77f8bd rfl: 0x0000000000010206
+
+    -- C level backtrace information -------------------------------------------
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(rb_vm_bugreport+0x96) [0x108b2af06]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(rb_bug_for_fatal_signal+0x1d0) [0x1089680b0]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(sigsegv+0x5b) [0x108a8d90b]
+    /usr/lib/system/libsystem_platform.dylib(_sigtramp+0x1d) [0x7fff208f5d7d]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle(invoke_callback+0x2d) [0x10a77f8bd]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(rb_vrescue2+0x117) [0x108973f27]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(rb_rescue2+0x7b) [0x108973deb]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle(callback_invoke+0xcc) [0x10a77f74c]
+    /usr/local/opt/libffi/lib/libffi.8.dylib(ffi_closure_unix64_inner+0x21e) [0x10a7ad92b]
+    /usr/local/opt/libffi/lib/libffi.8.dylib(0x10a7adf24) [0x10a7adf24]
+    /usr/lib/libcurl.4.dylib(Curl_client_write+0x220) [0x7fff333cce6e]
+    [0x7fff333cbbdc]
+    [0x7fff333e001e]
+    [0x7fff333ea585]
+    [0x7fff333e9b16]
+    [0x10a7add8a]
+    [0x10a7ad64c]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle(_rbffi_CallFunction+0x101) [0x10a77dbb1]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle(_custom_trampoline+0x19) [0x10a781879]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_call_cfunc+0x173) [0x108b1c413]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_exec_core+0x384c) [0x108b039dc]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_vm_exec+0xaea) [0x108b188ea]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_call0+0x534) [0x108b25c14]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_funcall_with_block_kw+0x85) [0x108b11305]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_invoke_block+0x341) [0x108b22031]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_exec_core+0x384c) [0x108b039dc]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_vm_exec+0xaea) [0x108b188ea]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_loop_i+0x5f) [0x108b26d2f]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_vrescue2+0x117) [0x108973f27]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_rescue2+0x7b) [0x108973deb]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_call_cfunc+0x173) [0x108b1c413]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_exec_core+0x36df) [0x108b0386f]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_vm_exec+0xaea) [0x108b188ea]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_catch_i+0x64) [0x108b26c74]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_catch_protect+0xd7) [0x108b13e17]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_f_catch+0x57) [0x108b14517]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_call_cfunc+0x173) [0x108b1c413]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_vm_exec_core+0x36df) [0x108b0386f]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_rb_vm_exec+0xaea) [0x108b188ea]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_thread_do_start+0x385) [0x108ad4d65]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_thread_start_func_2+0x239) [0x108ad4699]
+    /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib(_thread_start_func_1+0x12a) [0x108ad42aa]
+    [0x7fff208b08fc]
+
+    -- Other runtime information -----------------------------------------------
+
+    * Loaded script: /Users/edi/.rvm/rubies/ruby-2.7.2/bin/pod
+
+    * Loaded features:
+
+        0 enumerator.so
+        1 thread.rb
+        2 rational.so
+        3 complex.so
+        4 ruby2_keywords.rb
+        5 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+        6 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/trans/transdb.bundle
+        7 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/rbconfig.rb
+        8 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/compatibility.rb
+        9 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/defaults.rb
+       10 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/deprecate.rb
+       11 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/errors.rb
+       12 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/version.rb
+       13 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/requirement.rb
+       14 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/platform.rb
+       15 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/basic_specification.rb
+       16 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/stub_specification.rb
+       17 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/util.rb
+       18 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/text.rb
+       19 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/user_interaction.rb
+       20 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/specification_policy.rb
+       21 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/util/list.rb
+       22 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/specification.rb
+       23 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/exceptions.rb
+       24 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb
+       25 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/dependency.rb
+       26 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/core_ext/kernel_gem.rb
+       27 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/monitor.bundle
+       28 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/monitor.rb
+       29 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb
+       30 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/core_ext/kernel_warn.rb
+       31 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems.rb
+       32 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/path_support.rb
+       33 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/version.rb
+       34 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/core_ext/name_error.rb
+       35 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/levenshtein.rb
+       36 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/jaro_winkler.rb
+       37 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checker.rb
+       38 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checkers/name_error_checkers/class_name_checker.rb
+       39 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checkers/name_error_checkers/variable_name_checker.rb
+       40 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checkers/name_error_checkers.rb
+       41 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checkers/method_name_checker.rb
+       42 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checkers/key_error_checker.rb
+       43 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/spell_checkers/null_checker.rb
+       44 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/formatters/plain_formatter.rb
+       45 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean/tree_spell_checker.rb
+       46 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/did_you_mean.rb
+       47 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/executable-hooks-1.6.1/lib/executable-hooks/hooks.rb
+       48 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/vendor/fileutils/lib/fileutils.rb
+       49 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/vendored_fileutils.rb
+       50 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/pathname.bundle
+       51 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/pathname.rb
+       52 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/errors.rb
+       53 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/environment_preserver.rb
+       54 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/plugin/api.rb
+       55 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/plugin.rb
+       56 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source/git.rb
+       57 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source/installed.rb
+       58 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source/specific_file.rb
+       59 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source/local.rb
+       60 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source/lock.rb
+       61 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source/vendor.rb
+       62 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/source.rb
+       63 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/gem_helpers.rb
+       64 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/match_platform.rb
+       65 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/rubygems_ext.rb
+       66 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/rubygems_integration.rb
+       67 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/version.rb
+       68 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/constants.rb
+       69 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/current_ruby.rb
+       70 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler/build_metadata.rb
+       71 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bundler.rb
+       72 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/bundler-unload-1.0.2/lib/bundler-unload.rb
+       73 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/ext/builder.rb
+       74 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/rubygems-bundler-1.4.5/lib/rubygems-bundler/noexec.rb
+       75 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/tsort.rb
+       76 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/request_set/gem_dependency_api.rb
+       77 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/request_set/lockfile/parser.rb
+       78 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/request_set/lockfile/tokenizer.rb
+       79 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/request_set/lockfile.rb
+       80 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/request_set.rb
+       81 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/gem_metadata.rb
+       82 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/errors.rb
+       83 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb
+       84 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/action.rb
+       85 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/add_edge_no_circular.rb
+       86 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/add_vertex.rb
+       87 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/delete_edge.rb
+       88 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/detach_vertex_named.rb
+       89 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/set_payload.rb
+       90 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/tag.rb
+       91 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/log.rb
+       92 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/vertex.rb
+       93 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/dependency_graph.rb
+       94 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/state.rb
+       95 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/modules/specification_provider.rb
+       96 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/delegates/resolution_state.rb
+       97 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/delegates/specification_provider.rb
+       98 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/resolution.rb
+       99 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/resolver.rb
+      100 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo/modules/ui.rb
+      101 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo/lib/molinillo.rb
+      102 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/molinillo.rb
+      103 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/activation_request.rb
+      104 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/conflict.rb
+      105 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/dependency_request.rb
+      106 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/requirement_list.rb
+      107 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/stats.rb
+      108 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/set.rb
+      109 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/api_set.rb
+      110 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/composed_set.rb
+      111 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/best_set.rb
+      112 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/current_set.rb
+      113 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/git_set.rb
+      114 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/index_set.rb
+      115 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/installer_set.rb
+      116 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/lock_set.rb
+      117 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/vendor_set.rb
+      118 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/source_set.rb
+      119 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/specification.rb
+      120 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/spec_specification.rb
+      121 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/api_specification.rb
+      122 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/git_specification.rb
+      123 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/index_specification.rb
+      124 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/installed_specification.rb
+      125 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/local_specification.rb
+      126 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/lock_specification.rb
+      127 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver/vendor_specification.rb
+      128 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems/resolver.rb
+      129 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/version.rb
+      130 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/rfc2396_parser.rb
+      131 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/rfc3986_parser.rb
+      132 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/common.rb
+      133 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/generic.rb
+      134 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/file.rb
+      135 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/ftp.rb
+      136 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/http.rb
+      137 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/https.rb
+      138 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/ldap.rb
+      139 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/ldaps.rb
+      140 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/mailto.rb
+      141 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri.rb
+      142 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/ansi/cursor.rb
+      143 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/ansi/graphics.rb
+      144 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/ansi/string_escaper.rb
+      145 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/ansi.rb
+      146 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/argument.rb
+      147 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/argv.rb
+      148 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/command/banner.rb
+      149 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/command/plugin_manager.rb
+      150 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/command/argument_suggester.rb
+      151 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/command.rb
+      152 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/informative_error.rb
+      153 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide/help.rb
+      154 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/claide-1.1.0/lib/claide.rb
+      155 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/colored2-3.1.2/lib/colored2/codes.rb
+      156 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/forwardable/impl.rb
+      157 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/forwardable/version.rb
+      158 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/forwardable.rb
+      159 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/colored2-3.1.2/lib/colored2/ascii_decorator.rb
+      160 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/colored2-3.1.2/lib/colored2/strings.rb
+      161 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/colored2-3.1.2/lib/colored2.rb
+      162 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/gem_version.rb
+      163 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/user_interface.rb
+      164 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj.rb
+      165 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/string/strip.rb
+      166 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/constants.rb
+      167 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/utility/engine.rb
+      168 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/abstract_object.rb
+      169 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/utility/native_extension_loader.rb
+      170 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/mri_object.rb
+      171 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/jruby_object.rb
+      172 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/rbx_object.rb
+      173 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/truffleruby_object.rb
+      174 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/object.rb
+      175 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/volatile.rb
+      176 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/abstract_lockable_object.rb
+      177 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb
+      178 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/jruby_lockable_object.rb
+      179 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/rbx_lockable_object.rb
+      180 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/lockable_object.rb
+      181 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/condition.rb
+      182 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/lock.rb
+      183 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization.rb
+      184 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb
+      185 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb
+      186 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/map.rb
+      187 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/hash/deep_merge.rb
+      188 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/hash/except.rb
+      189 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/hash/slice.rb
+      190 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/thread_safe/util.rb
+      191 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/hash.rb
+      192 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/version.rb
+      193 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/utils.rb
+      194 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/cgi/core.rb
+      195 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/cgi/escape.bundle
+      196 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/cgi/util.rb
+      197 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/cgi/cookie.rb
+      198 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/cgi.rb
+      199 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/exceptions.rb
+      200 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/interpolate/ruby.rb
+      201 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n.rb
+      202 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/lazy_load_hooks.rb
+      203 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/config.rb
+      204 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/i18n.rb
+      205 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/inflector/inflections.rb
+      206 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/inflections.rb
+      207 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/object/blank.rb
+      208 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/inflector/methods.rb
+      209 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/multibyte.rb
+      210 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/string/multibyte.rb
+      211 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/inflector/transliterate.rb
+      212 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/string/inflections.rb
+      213 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/date_core.bundle
+      214 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/date.rb
+      215 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/time.rb
+      216 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/base64.rb
+      217 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/bigdecimal.bundle
+      218 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bigdecimal.rb
+      219 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/bigdecimal/util.rb
+      220 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/module/delegation.rb
+      221 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/date_time/calculations.rb
+      222 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/kernel/reporting.rb
+      223 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/stringio.bundle
+      224 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/xml_mini/rexml.rb
+      225 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/xml_mini.rb
+      226 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/hash/keys.rb
+      227 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/object/to_query.rb
+      228 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/object/to_param.rb
+      229 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/conversions.rb
+      230 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/fileutils.rb
+      231 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/etc.bundle
+      232 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/tmpdir.rb
+      233 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/gem_version.rb
+      234 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/version_metadata.rb
+      235 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/gem_version.rb
+      236 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/vendor/version.rb
+      237 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/vendor/requirement.rb
+      238 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/vendor.rb
+      239 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/root_attribute_accessors.rb
+      240 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/consumer.rb
+      241 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/dsl/attribute_support.rb
+      242 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/dsl/attribute.rb
+      243 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/dsl/platform_proxy.rb
+      244 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/dsl/deprecations.rb
+      245 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/dsl.rb
+      246 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/linter/result.rb
+      247 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/linter/analyzer.rb
+      248 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/linter.rb
+      249 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/set/presenter.rb
+      250 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/set.rb
+      251 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification/json.rb
+      252 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/specification.rb
+      253 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core.rb
+      254 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/multibyte/unicode.rb
+      255 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/config.rb
+      256 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/gem_version.rb
+      257 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/api.rb
+      258 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/api_exposable.rb
+      259 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/shellwords.rb
+      260 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/base.rb
+      261 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/standard_error.rb
+      262 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader.rb
+      263 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/downloader/cache.rb
+      264 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+      265 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/digest.rb
+      266 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/downloader/request.rb
+      267 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/downloader/response.rb
+      268 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/downloader.rb
+      269 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/gh_inspector-1.1.3/lib/gh_inspector/version.rb
+      270 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/gh_inspector-1.1.3/lib/gh_inspector/inspector.rb
+      271 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/strscan.bundle
+      272 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/erb.rb
+      273 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/socket.bundle
+      274 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/wait.bundle
+      275 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/socket.rb
+      276 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/timeout.rb
+      277 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/protocol.rb
+      278 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/zlib.bundle
+      279 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/exceptions.rb
+      280 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/header.rb
+      281 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/windows_31j.bundle
+      282 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/generic_request.rb
+      283 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/request.rb
+      284 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/requests.rb
+      285 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/response.rb
+      286 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/responses.rb
+      287 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/proxy_delta.rb
+      288 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http/backward.rb
+      289 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/net/http.rb
+      290 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/json/version.rb
+      291 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/ostruct/version.rb
+      292 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/ostruct.rb
+      293 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/json/generic_object.rb
+      294 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/json/common.rb
+      295 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/parser.bundle
+      296 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/generator.bundle
+      297 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/json/ext.rb
+      298 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/json.rb
+      299 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/gh_inspector-1.1.3/lib/gh_inspector/sidekick.rb
+      300 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/gh_inspector-1.1.3/lib/gh_inspector/evidence.rb
+      301 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/gh_inspector-1.1.3/lib/gh_inspector/exception_hound.rb
+      302 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/gh_inspector-1.1.3/lib/gh_inspector.rb
+      303 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/user_interface/error_report.rb
+      304 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/addressable-2.8.0/lib/addressable/version.rb
+      305 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/addressable-2.8.0/lib/addressable/idna/pure.rb
+      306 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/addressable-2.8.0/lib/addressable/idna.rb
+      307 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/public_suffix-4.0.6/lib/public_suffix/domain.rb
+      308 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/public_suffix-4.0.6/lib/public_suffix/version.rb
+      309 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/public_suffix-4.0.6/lib/public_suffix/errors.rb
+      310 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/public_suffix-4.0.6/lib/public_suffix/rule.rb
+      311 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/public_suffix-4.0.6/lib/public_suffix/list.rb
+      312 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/public_suffix-4.0.6/lib/public_suffix.rb
+      313 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/addressable-2.8.0/lib/addressable/uri.rb
+      314 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/addressable-2.8.0/lib/addressable/template.rb
+      315 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/addressable-2.8.0/lib/addressable.rb
+      316 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/user_interface/inspector_reporter.rb
+      317 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/core_ui.rb
+      318 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/user_interface.rb
+      319 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/source/acceptor.rb
+      320 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/source/aggregate.rb
+      321 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/source/health_reporter.rb
+      322 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/source/manager.rb
+      323 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/hash/reverse_merge.rb
+      324 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/hash_with_indifferent_access.rb
+      325 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/hash/indifferent_access.rb
+      326 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/source/metadata.rb
+      327 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/source.rb
+      328 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/open-uri.rb
+      329 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/open-uri.rb
+      330 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/netrc-0.11.0/lib/netrc.rb
+      331 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/openssl.bundle
+      332 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/bn.rb
+      333 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/pkey.rb
+      334 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/cipher.rb
+      335 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/config.rb
+      336 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/digest.rb
+      337 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/x509.rb
+      338 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/buffering.rb
+      339 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/nonblock.bundle
+      340 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/ipaddr.rb
+      341 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/ssl.rb
+      342 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl/pkcs5.rb
+      343 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/openssl.rb
+      344 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nap-1.1.0/lib/rest/error.rb
+      345 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nap-1.1.0/lib/rest/request.rb
+      346 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nap-1.1.0/lib/rest/response.rb
+      347 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nap-1.1.0/lib/rest.rb
+      348 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/versions.rb
+      349 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/exception.rb
+      350 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/syntax_error.rb
+      351 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/psych.bundle
+      352 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/omap.rb
+      353 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/set.rb
+      354 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/class_loader.rb
+      355 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/scalar_scanner.rb
+      356 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/node.rb
+      357 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/stream.rb
+      358 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/document.rb
+      359 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/sequence.rb
+      360 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/scalar.rb
+      361 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/mapping.rb
+      362 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes/alias.rb
+      363 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/nodes.rb
+      364 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/streaming.rb
+      365 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors/visitor.rb
+      366 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors/to_ruby.rb
+      367 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors/emitter.rb
+      368 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/handler.rb
+      369 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/tree_builder.rb
+      370 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors/yaml_tree.rb
+      371 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/json/ruby_events.rb
+      372 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors/json_tree.rb
+      373 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors/depth_first.rb
+      374 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/visitors.rb
+      375 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/parser.rb
+      376 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/coder.rb
+      377 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/core_ext.rb
+      378 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/stream.rb
+      379 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/json/yaml_events.rb
+      380 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/json/tree_builder.rb
+      381 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/json/stream.rb
+      382 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych/handlers/document_stream.rb
+      383 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/psych.rb
+      384 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/yaml.rb
+      385 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/executable.rb
+      386 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/version.rb
+      387 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/errors.rb
+      388 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/event.rb
+      389 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/concern/dereferenceable.rb
+      390 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/concern/obligation.rb
+      391 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger/version.rb
+      392 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger/formatter.rb
+      393 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger/period.rb
+      394 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger/log_device.rb
+      395 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger/severity.rb
+      396 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger/errors.rb
+      397 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/logger.rb
+      398 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/concern/logging.rb
+      399 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/concern/deprecation.rb
+      400 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/executor_service.rb
+      401 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/abstract_executor_service.rb
+      402 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/serial_executor_service.rb
+      403 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/immediate_executor.rb
+      404 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/delay.rb
+      405 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic_reference/numeric_cas_wrapper.rb
+      406 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic_reference/mutex_atomic.rb
+      407 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/atomic_reference.rb
+      408 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_executor_service.rb
+      409 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/utility/monotonic_time.rb
+      410 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb
+      411 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/thread_pool_executor.rb
+      412 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/cached_thread_pool.rb
+      413 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/utility/processor_counter.rb
+      414 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/configuration.rb
+      415 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/mutex_atomic_boolean.rb
+      416 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/atomic_boolean.rb
+      417 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/utility/native_integer.rb
+      418 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/mutex_atomic_fixnum.rb
+      419 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/atomic_fixnum.rb
+      420 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/cyclic_barrier.rb
+      421 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/mutex_count_down_latch.rb
+      422 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/java_count_down_latch.rb
+      423 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/count_down_latch.rb
+      424 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/read_write_lock.rb
+      425 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/abstract_thread_local_var.rb
+      426 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/ruby_thread_local_var.rb
+      427 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/java_thread_local_var.rb
+      428 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/thread_local_var.rb
+      429 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/reentrant_read_write_lock.rb
+      430 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/mutex_semaphore.rb
+      431 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/semaphore.rb
+      432 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomics.rb
+      433 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/fixed_thread_pool.rb
+      434 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/simple_executor_service.rb
+      435 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/indirect_immediate_executor.rb
+      436 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/java_executor_service.rb
+      437 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/java_single_thread_executor.rb
+      438 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/java_thread_pool_executor.rb
+      439 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_single_thread_executor.rb
+      440 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb
+      441 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/serialized_execution.rb
+      442 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/delegate.rb
+      443 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/serialized_execution_delegator.rb
+      444 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/single_thread_executor.rb
+      445 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/copy_on_write_observer_set.rb
+      446 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/copy_on_notify_observer_set.rb
+      447 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/concern/observable.rb
+      448 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/ivar.rb
+      449 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/options.rb
+      450 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/scheduled_task.rb
+      451 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/java_non_concurrent_priority_queue.rb
+      452 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/ruby_non_concurrent_priority_queue.rb
+      453 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/non_concurrent_priority_queue.rb
+      454 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/timer_set.rb
+      455 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executors.rb
+      456 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atomic/atomic_markable_reference.rb
+      457 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/agent.rb
+      458 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/atom.rb
+      459 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/array.rb
+      460 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/thread_safe/util/data_structures.rb
+      461 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/set.rb
+      462 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/tuple.rb
+      463 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/async.rb
+      464 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/future.rb
+      465 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/dataflow.rb
+      466 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/maybe.rb
+      467 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/exchanger.rb
+      468 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/synchronization/abstract_struct.rb
+      469 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/immutable_struct.rb
+      470 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/mutable_struct.rb
+      471 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/mvar.rb
+      472 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/promise.rb
+      473 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/settable_struct.rb
+      474 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/timer_task.rb
+      475 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/tvar.rb
+      476 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/collection/lock_free_stack.rb
+      477 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/re_include.rb
+      478 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/promises.rb
+      479 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/thread_safe/synchronized_delegator.rb
+      480 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent.rb
+      481 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/cdn_source.rb
+      482 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/trunk_source.rb
+      483 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/sources_manager.rb
+      484 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/core_overrides.rb
+      485 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods.rb
+      486 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/delegates/specification_provider.rb
+      487 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/errors.rb
+      488 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/options/repo_update.rb
+      489 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/options/project_directory.rb
+      490 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/cache/list.rb
+      491 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/cache/clean.rb
+      492 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/cache.rb
+      493 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/env.rb
+      494 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/init.rb
+      495 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/install.rb
+      496 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc/list.rb
+      497 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc/podfile.rb
+      498 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc/podfile_json.rb
+      499 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc/repl.rb
+      500 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc/spec.rb
+      501 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc/update_search_index.rb
+      502 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/ipc.rb
+      503 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/lib/create.rb
+      504 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/lib/lint.rb
+      505 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/lib.rb
+      506 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/list.rb
+      507 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/outdated.rb
+      508 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/add.rb
+      509 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/add_cdn.rb
+      510 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/lint.rb
+      511 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/list.rb
+      512 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/tempfile.rb
+      513 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/push.rb
+      514 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/remove.rb
+      515 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo/update.rb
+      516 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/repo.rb
+      517 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/setup.rb
+      518 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/spec/create.rb
+      519 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/spec/lint.rb
+      520 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/spec/which.rb
+      521 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/spec/cat.rb
+      522 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/spec/edit.rb
+      523 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/spec.rb
+      524 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command/update.rb
+      525 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/command.rb
+      526 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/open3.rb
+      527 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-deintegrate-1.0.5/lib/cocoapods/deintegrate/gem_version.rb
+      528 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-deintegrate-1.0.5/lib/cocoapods/deintegrator.rb
+      529 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-deintegrate-1.0.5/lib/cocoapods_deintegrate.rb
+      530 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-deintegrate-1.0.5/lib/cocoapods/command/deintegrate.rb
+      531 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-deintegrate-1.0.5/lib/cocoapods_plugin.rb
+      532 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/gem_index_cache.rb
+      533 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/gem_helper.rb
+      534 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins_helper.rb
+      535 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins/list.rb
+      536 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins/search.rb
+      537 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins/create.rb
+      538 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins/publish.rb
+      539 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins/installed.rb
+      540 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/pod/command/plugins.rb
+      541 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-plugins-1.0.0/lib/cocoapods_plugin.rb
+      542 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-search-1.0.1/lib/cocoapods-search/command/search.rb
+      543 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-search-1.0.1/lib/cocoapods-search/command.rb
+      544 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-search-1.0.1/lib/cocoapods_plugin.rb
+      545 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/add_owner.rb
+      546 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/delete.rb
+      547 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/deprecate.rb
+      548 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/info.rb
+      549 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/me.rb
+      550 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/push.rb
+      551 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/register.rb
+      552 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk/remove_owner.rb
+      553 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/pod/command/trunk.rb
+      554 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-trunk-1.6.0/lib/cocoapods_plugin.rb
+      555 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-try-1.2.0/lib/pod/try_settings.rb
+      556 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-try-1.2.0/lib/pod/command/try.rb
+      557 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-try-1.2.0/lib/cocoapods_plugin.rb
+      558 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/unicode_normalize/tables.rb
+      559 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/unicode_normalize/normalize.rb
+      560 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/podfile/dsl.rb
+      561 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/podfile/target_definition.rb
+      562 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/podfile.rb
+      563 /Users/edi/development/flutter-2.10.4/packages/flutter_tools/bin/podhelper.rb
+      564 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/build_type.rb
+      565 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/podfile.rb
+      566 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer.rb
+      567 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/sandbox.rb
+      568 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/sandbox/headers_store.rb
+      569 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/lockfile.rb
+      570 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/pre_install_hooks_context.rb
+      571 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/hooks_manager.rb
+      572 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/source_provider_hooks_context.rb
+      573 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/version.rb
+      574 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer.rb
+      575 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/installation_options.rb
+      576 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer/podfile_dependency_cache.rb
+      577 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/platform.rb
+      578 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/dependency.rb
+      579 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/requirement.rb
+      580 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/podfile_validator.rb
+      581 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/bazaar.rb
+      582 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/git.rb
+      583 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/mercurial.rb
+      584 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/remote_file.rb
+      585 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/http.rb
+      586 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/scp.rb
+      587 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-downloader-1.5.1/lib/cocoapods-downloader/subversion.rb
+      588 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer/target_inspector.rb
+      589 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/atomos-0.1.3/lib/atomos/version.rb
+      590 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/atomos-0.1.3/lib/atomos.rb
+      591 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/securerandom.rb
+      592 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/case_converter.rb
+      593 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object_attributes.rb
+      594 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object_dictionary.rb
+      595 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object_list.rb
+      596 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/constants.rb
+      597 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/swift_package_remote_reference.rb
+      598 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/swift_package_product_dependency.rb
+      599 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/helpers/build_settings_array_settings_by_object_version.rb
+      600 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/build_configuration.rb
+      601 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/build_file.rb
+      602 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/build_phase.rb
+      603 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/build_rule.rb
+      604 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/configuration_list.rb
+      605 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/container_item_proxy.rb
+      606 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/helpers/groupable_helper.rb
+      607 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/file_reference.rb
+      608 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/helpers/file_references_factory.rb
+      609 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/group.rb
+      610 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/native_target.rb
+      611 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/root_object.rb
+      612 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/target_dependency.rb
+      613 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object/reference_proxy.rb
+      614 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/object.rb
+      615 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/project_helper.rb
+      616 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project/uuid_generator.rb
+      617 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/plist.rb
+      618 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/project.rb
+      619 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/version.rb
+      620 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/object.rb
+      621 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/plist.rb
+      622 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/reader.rb
+      623 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/unicode/next_step_mapping.rb
+      624 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/unicode/quote_maps.rb
+      625 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/unicode.rb
+      626 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo/writer.rb
+      627 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/nanaimo-0.3.0/lib/nanaimo.rb
+      628 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/config/other_linker_flags_parser.rb
+      629 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/xcodeproj-1.21.0/lib/xcodeproj/config.rb
+      630 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer/target_inspection_result.rb
+      631 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer/specs_state.rb
+      632 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/external_sources/abstract_external_source.rb
+      633 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/external_sources/downloader_source.rb
+      634 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/external_sources/path_source.rb
+      635 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/external_sources/podspec_source.rb
+      636 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/external_sources.rb
+      637 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/wrap.rb
+      638 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/access.rb
+      639 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/extract.rb
+      640 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/extract_options.rb
+      641 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/grouping.rb
+      642 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/symbol/starts_ends_with.rb
+      643 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/array_inquirer.rb
+      644 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array/inquiry.rb
+      645 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4.4/lib/active_support/core_ext/array.rb
+      646 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/validator.rb
+      647 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/backend.rb
+      648 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/backend/transliterator.rb
+      649 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/backend/base.rb
+      650 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/i18n-1.9.1/lib/i18n/backend/simple.rb
+      651 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/action.rb
+      652 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/add_edge_no_circular.rb
+      653 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/add_vertex.rb
+      654 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/delete_edge.rb
+      655 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/detach_vertex_named.rb
+      656 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/set_payload.rb
+      657 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/tag.rb
+      658 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/log.rb
+      659 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph/vertex.rb
+      660 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/dependency_graph.rb
+      661 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer/locking_dependency_analyzer.rb
+      662 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/gem_metadata.rb
+      663 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/state.rb
+      664 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/modules/specification_provider.rb
+      665 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/delegates/resolution_state.rb
+      666 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb
+      667 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/resolver.rb
+      668 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo/modules/ui.rb
+      669 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/molinillo-0.8.0/lib/molinillo.rb
+      670 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/resolver/lazy_specification.rb
+      671 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/resolver/resolver_specification.rb
+      672 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/cocoapods-1.11.3/lib/cocoapods/resolver.rb
+      673 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha2.bundle
+      674 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/digest/sha2.rb
+      675 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+      676 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/platform.rb
+      677 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/data_converter.rb
+      678 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/types.rb
+      679 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/library.rb
+      680 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/errno.rb
+      681 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/abstract_memory.rb
+      682 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/pointer.rb
+      683 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/memorypointer.rb
+      684 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/struct_layout.rb
+      685 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/struct_layout_builder.rb
+      686 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/struct_by_reference.rb
+      687 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/struct.rb
+      688 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/union.rb
+      689 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/managedstruct.rb
+      690 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/callback.rb
+      691 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/io.rb
+      692 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/autopointer.rb
+      693 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/variadic.rb
+      694 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/enum.rb
+      695 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/version.rb
+      696 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi/ffi.rb
+      697 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi.rb
+      698 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/libc.rb
+      699 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/codes.rb
+      700 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/options.rb
+      701 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/infos.rb
+      702 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/form_options.rb
+      703 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/messages.rb
+      704 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/functions.rb
+      705 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/constants.rb
+      706 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/settings.rb
+      707 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curls/classes.rb
+      708 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/curl.rb
+      709 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/informations.rb
+      710 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/features.rb
+      711 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/callbacks.rb
+      712 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/options.rb
+      713 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/header.rb
+      714 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/util.rb
+      715 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/queryable.rb
+      716 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/params.rb
+      717 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/form.rb
+      718 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/putable.rb
+      719 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/postable.rb
+      720 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/actionable.rb
+      721 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/post.rb
+      722 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/get.rb
+      723 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/head.rb
+      724 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/put.rb
+      725 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/delete.rb
+      726 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/patch.rb
+      727 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/options.rb
+      728 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http/custom.rb
+      729 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/http.rb
+      730 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/operations.rb
+      731 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb
+      732 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/debug_info.rb
+      733 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/mirror.rb
+      734 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy.rb
+      735 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/ethon_error.rb
+      736 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/global_init.rb
+      737 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/multi_timeout.rb
+      738 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/multi_fdset.rb
+      739 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/multi_add.rb
+      740 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/multi_remove.rb
+      741 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/select.rb
+      742 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/invalid_option.rb
+      743 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors/invalid_value.rb
+      744 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/errors.rb
+      745 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/loggable.rb
+      746 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/stack.rb
+      747 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb
+      748 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/options.rb
+      749 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi.rb
+      750 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/version.rb
+      751 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ethon-0.15.0/lib/ethon.rb
+      752 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/config.rb
+      753 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/easy_factory.rb
+      754 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/errors/typhoeus_error.rb
+      755 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/errors/no_stub.rb
+      756 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/errors.rb
+      757 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/expectation.rb
+      758 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/addable.rb
+      759 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/before.rb
+      760 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/cacheable.rb
+      761 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/block_connection.rb
+      762 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/memoizable.rb
+      763 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/queueable.rb
+      764 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/runnable.rb
+      765 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/stubbable.rb
+      766 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra.rb
+      767 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/pool.rb
+      768 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha1.bundle
+      769 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/actions.rb
+      770 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/before.rb
+      771 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/block_connection.rb
+      772 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/cacheable.rb
+      773 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb
+      774 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/marshal.rb
+      775 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/memoizable.rb
+      776 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/operations.rb
+      777 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/responseable.rb
+      778 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/streamable.rb
+      779 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/stubbable.rb
+      780 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request.rb
+      781 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/response/header.rb
+      782 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/response/informations.rb
+      783 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/response/status.rb
+      784 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/response/cacheable.rb
+      785 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/response.rb
+      786 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/version.rb
+      787 /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus.rb
+
+    * Process memory map:
+
+    1088b4000-1088b8000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/bin/ruby
+    1088b8000-1088bc000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/bin/ruby
+    1088bc000-1088c0000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/bin/ruby
+    1088c0000-1088c1000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/bin/ruby
+    1088c1000-1088c4000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    1088c4000-1088c6000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    1088c6000-1088c7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    1088c7000-1088c8000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    1088c8000-1088c9000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    1088c9000-1088ca000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    1088ca000-108bda000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    108bda000-108be2000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    108be2000-108be6000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    108be6000-108bfe000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    108bfe000-108ce4000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    108ce4000-108ce6000 rw- /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.10.dylib
+    108ce6000-108d46000 r-x /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.10.dylib
+    108d46000-108d4a000 r-- /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.10.dylib
+    108d4a000-108d4e000 rw- /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.10.dylib
+    108d4e000-108d5b000 r-- /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.10.dylib
+    108d5b000-108d5e000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d5e000-108d5f000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d5f000-108d63000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d63000-108d64000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d64000-108d68000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d68000-108d69000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d69000-108d6a000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d6a000-108d6e000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d6e000-108d6f000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d6f000-108d70000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108d70000-108e11000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108e11000-108e12000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108e12000-108eb3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108eb3000-108eb4000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108eb4000-108f55000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108f55000-108f56000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108f56000-108ff7000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108ff7000-108ff8000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    108ff8000-109099000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109099000-10909a000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10909a000-10913b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10913b000-10913c000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10913c000-1091dd000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1091dd000-1091de000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1091de000-10927f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10927f000-109280000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109280000-109321000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109321000-109322000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109322000-1093c3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1093c3000-1093c4000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1093c4000-109465000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109465000-109466000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109466000-109507000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109507000-109508000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109508000-1095a9000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1095a9000-1095aa000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1095aa000-10964b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10964b000-10964c000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10964c000-1096ed000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1096ed000-1096ee000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1096ee000-10978f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10978f000-109790000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109790000-109831000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109831000-109832000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109832000-1098d3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1098d3000-1098d4000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    1098d4000-109975000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109975000-109976000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109976000-109a17000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109a17000-109a18000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109a18000-109ab9000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109ab9000-109aba000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109aba000-109b5b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109b5b000-109b5c000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109b5c000-109bfd000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109bfd000-109bfe000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109bfe000-109c9f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109c9f000-109ca0000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109ca0000-109d41000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109d41000-109d42000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109d42000-109de3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109de3000-109de4000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109de4000-109e85000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109e85000-109e86000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109e86000-109f27000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109f27000-109f28000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109f28000-109fc9000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109fc9000-109fca000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    109fca000-10a06b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a06b000-10a06c000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a06c000-10a10d000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a10d000-10a10e000 --- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a10e000-10a1af000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a1af000-10a1b3000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a1b3000-10a1b7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a1b7000-10a1bb000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a1bb000-10a1bc000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/encdb.bundle
+    10a1bc000-10a1bf000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/trans/transdb.bundle
+    10a1bf000-10a1c3000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/trans/transdb.bundle
+    10a1c3000-10a1c7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/trans/transdb.bundle
+    10a1c7000-10a1cb000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/trans/transdb.bundle
+    10a1cb000-10a1cc000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/trans/transdb.bundle
+    10a1cc000-10a1cf000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/monitor.bundle
+    10a1cf000-10a1d3000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/monitor.bundle
+    10a1d3000-10a1d7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/monitor.bundle
+    10a1d7000-10a1db000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/monitor.bundle
+    10a1db000-10a1dc000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/monitor.bundle
+    10a1dc000-10a1df000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/pathname.bundle
+    10a1df000-10a1e7000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/pathname.bundle
+    10a1e7000-10a1eb000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/pathname.bundle
+    10a1eb000-10a1ef000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/pathname.bundle
+    10a1ef000-10a1f4000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/pathname.bundle
+    10a1f4000-10a1f7000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/cgi/escape.bundle
+    10a1f7000-10a1fb000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/cgi/escape.bundle
+    10a1fb000-10a1ff000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/cgi/escape.bundle
+    10a1ff000-10a203000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/cgi/escape.bundle
+    10a203000-10a204000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/cgi/escape.bundle
+    10a204000-10a207000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/date_core.bundle
+    10a207000-10a253000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/date_core.bundle
+    10a253000-10a257000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/date_core.bundle
+    10a257000-10a25b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/date_core.bundle
+    10a25b000-10a275000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/date_core.bundle
+    10a275000-10a277000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/bigdecimal.bundle
+    10a277000-10a28b000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/bigdecimal.bundle
+    10a28b000-10a28f000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/bigdecimal.bundle
+    10a28f000-10a293000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/bigdecimal.bundle
+    10a293000-10a298000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/bigdecimal.bundle
+    10a298000-10a29b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/stringio.bundle
+    10a29b000-10a2a3000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/stringio.bundle
+    10a2a3000-10a2a7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/stringio.bundle
+    10a2a7000-10a2ab000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/stringio.bundle
+    10a2ab000-10a2af000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/stringio.bundle
+    10a2af000-10a2b3000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/etc.bundle
+    10a2b3000-10a2b7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/etc.bundle
+    10a2b7000-10a2bb000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/etc.bundle
+    10a2bb000-10a2be000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/etc.bundle
+    10a2be000-10a2bf000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+    10a2bf000-10a2ff000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+    10a2ff000-10a303000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+    10a303000-10a307000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+    10a307000-10a30b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+    10a30b000-10a30d000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest.bundle
+    10a30d000-10a30f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/strscan.bundle
+    10a30f000-10a313000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/strscan.bundle
+    10a313000-10a317000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/strscan.bundle
+    10a317000-10a31b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/strscan.bundle
+    10a31b000-10a31e000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/strscan.bundle
+    10a31e000-10a31f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/socket.bundle
+    10a31f000-10a33f000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/socket.bundle
+    10a33f000-10a343000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/socket.bundle
+    10a343000-10a347000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/socket.bundle
+    10a347000-10a356000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/socket.bundle
+    10a356000-10a357000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/wait.bundle
+    10a357000-10a35b000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/wait.bundle
+    10a35b000-10a35f000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/wait.bundle
+    10a35f000-10a363000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/wait.bundle
+    10a363000-10a364000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/wait.bundle
+    10a364000-10a367000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/zlib.bundle
+    10a367000-10a373000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/zlib.bundle
+    10a373000-10a377000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/zlib.bundle
+    10a377000-10a37b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/zlib.bundle
+    10a37b000-10a383000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/zlib.bundle
+    10a383000-10a397000 r-x /usr/local/Cellar/zlib/1.2.11/lib/libz.1.2.11.dylib
+    10a397000-10a39b000 r-- /usr/local/Cellar/zlib/1.2.11/lib/libz.1.2.11.dylib
+    10a39b000-10a39f000 rw- /usr/local/Cellar/zlib/1.2.11/lib/libz.1.2.11.dylib
+    10a39f000-10a3a1000 r-- /usr/local/Cellar/zlib/1.2.11/lib/libz.1.2.11.dylib
+    10a3a1000-10a3a3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/windows_31j.bundle
+    10a3a3000-10a3a7000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/windows_31j.bundle
+    10a3a7000-10a3ab000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/windows_31j.bundle
+    10a3ab000-10a3af000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/windows_31j.bundle
+    10a3af000-10a3b0000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/enc/windows_31j.bundle
+    10a3b0000-10a3b3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/parser.bundle
+    10a3b3000-10a3bb000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/parser.bundle
+    10a3bb000-10a3bf000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/parser.bundle
+    10a3bf000-10a3c3000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/parser.bundle
+    10a3c3000-10a3c5000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/parser.bundle
+    10a3c5000-10a3c7000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/generator.bundle
+    10a3c7000-10a3cf000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/generator.bundle
+    10a3cf000-10a3d3000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/generator.bundle
+    10a3d3000-10a3d7000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/generator.bundle
+    10a3d7000-10a3db000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/json/ext/generator.bundle
+    10a3db000-10a413000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/openssl.bundle
+    10a413000-10a417000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/openssl.bundle
+    10a417000-10a41b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/openssl.bundle
+    10a41b000-10a44b000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/openssl.bundle
+    10a44b000-10a49b000 r-x /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libssl.1.1.dylib
+    10a49b000-10a4a3000 r-- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libssl.1.1.dylib
+    10a4a3000-10a4ab000 rw- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libssl.1.1.dylib
+    10a4ab000-10a4c6000 r-- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libssl.1.1.dylib
+    10a4c6000-10a4c7000 rw- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libcrypto.1.1.dylib
+    10a4c7000-10a687000 r-x /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libcrypto.1.1.dylib
+    10a687000-10a6b3000 r-- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libcrypto.1.1.dylib
+    10a6b3000-10a6b7000 rw- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libcrypto.1.1.dylib
+    10a6b7000-10a6bb000 rw- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libcrypto.1.1.dylib
+    10a6bb000-10a71f000 r-- /usr/local/Cellar/openssl@1.1/1.1.1n/lib/libcrypto.1.1.dylib
+    10a71f000-10a723000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/nonblock.bundle
+    10a723000-10a727000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/nonblock.bundle
+    10a727000-10a72b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/nonblock.bundle
+    10a72b000-10a72c000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/io/nonblock.bundle
+    10a72c000-10a72f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/psych.bundle
+    10a72f000-10a733000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/psych.bundle
+    10a733000-10a737000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/psych.bundle
+    10a737000-10a73b000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/psych.bundle
+    10a73b000-10a73f000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/psych.bundle
+    10a73f000-10a757000 r-x /usr/local/Cellar/libyaml/0.2.5/lib/libyaml-0.2.dylib
+    10a757000-10a75b000 r-- /usr/local/Cellar/libyaml/0.2.5/lib/libyaml-0.2.dylib
+    10a75b000-10a75f000 rw- /usr/local/Cellar/libyaml/0.2.5/lib/libyaml-0.2.dylib
+    10a75f000-10a763000 r-- /usr/local/Cellar/libyaml/0.2.5/lib/libyaml-0.2.dylib
+    10a763000-10a767000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha2.bundle
+    10a767000-10a76b000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha2.bundle
+    10a76b000-10a76f000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha2.bundle
+    10a76f000-10a770000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha2.bundle
+    10a770000-10a773000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+    10a773000-10a78b000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+    10a78b000-10a78f000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+    10a78f000-10a793000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+    10a793000-10a7a7000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+    10a7a7000-10a7af000 r-x /usr/local/Cellar/libffi/3.4.2/lib/libffi.8.dylib
+    10a7af000-10a7b3000 r-- /usr/local/Cellar/libffi/3.4.2/lib/libffi.8.dylib
+    10a7b3000-10a7b7000 rw- /usr/local/Cellar/libffi/3.4.2/lib/libffi.8.dylib
+    10a7b7000-10a7b9000 r-- /usr/local/Cellar/libffi/3.4.2/lib/libffi.8.dylib
+    10a7b9000-10a7bb000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha1.bundle
+    10a7bb000-10a7bf000 r-x /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha1.bundle
+    10a7bf000-10a7c3000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha1.bundle
+    10a7c3000-10a7c7000 rw- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha1.bundle
+    10a7c7000-10a7c8000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/x86_64-darwin20/digest/sha1.bundle
+    10a7c8000-10a7cb000 rw- /Library/Preferences/Logging/.plist-cache.8Qfzeet9
+    10a7cb000-10a7cc000 r-x /Library/Preferences/Logging/.plist-cache.8Qfzeet9
+    10a7cc000-10a7cd000 r-x /Library/Preferences/Logging/.plist-cache.8Qfzeet9
+    10a7cd000-10a7d6000 r-- /Library/Preferences/Logging/.plist-cache.8Qfzeet9
+    10a7d6000-10a7e3000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/bin/ruby
+    10a7e3000-10a84d000 r-- /usr/lib/system/libsystem_platform.dylib
+    10a84d000-10a881000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/ffi-1.15.5/lib/ffi_c.bundle
+    10a881000-10a893000 r-- /usr/local/Cellar/libffi/3.4.2/lib/libffi.8.dylib
+    10a8e8000-10a984000 r-x /usr/lib/dyld
+    10a984000-10a98c000 r-- /usr/lib/dyld
+    10a98c000-10a990000 rw- /usr/lib/dyld
+    10a990000-10a9c4000 rw- /usr/lib/dyld
+    10a9c4000-10a9fc000 r-- /usr/lib/dyld
+    10a9fc000-10aa00000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    10aa00000-10ae02000 r-- /Users/edi/.rvm/rubies/ruby-2.7.2/lib/libruby.2.7.dylib
+    70000b2e5000-70000b2e6000 ---
+    70000b2e6000-70000b368000 rw-
+    70000b368000-70000b369000 ---
+    70000b369000-70000b56b000 rw-
+    70000b56b000-70000b56c000 ---
+    70000b56c000-70000b76e000 rw-
+    7f9cb3c00000-7f9cb3d00000 rw-
+    7f9cb3d00000-7f9cb3d1b000 rw-
+    7f9cb3d1b000-7f9cb3e1b000 rw-
+    7f9cb3e1b000-7f9cb3e2b000 rw-
+    7f9cb3e2b000-7f9cb3e8b000 rw-
+    7f9cb3e8b000-7f9cb3e9f000 rw-
+    7f9cb3e9f000-7f9cb3eba000 rw-
+    7f9cb3eba000-7f9cb3ed2000 rw-
+    7f9cb3ed2000-7f9cb3eef000 rw-
+    7f9cb3eef000-7f9cb3f28000 rw-
+    7f9cb3f28000-7f9cb3f58000 rw-
+    7f9cb3f58000-7f9cb3f91000 rw-
+    7f9cb3f91000-7f9cb3fc1000 rw-
+    7f9cb3fc1000-7f9cb3fe0000 rw-
+    7f9cb3fe0000-7f9cb3ff8000 rw-
+    7f9cb4000000-7f9cb4800000 rw-
+    7f9cb4800000-7f9cb6800000 rw-
+    7f9cb6800000-7f9cb6900000 rw-
+    7f9cb6900000-7f9cb6a00000 rw-
+    7f9cb6a00000-7f9cb6b00000 rw-
+    7f9cb6b00000-7f9cb6c00000 rw-
+    7f9cb6c00000-7f9cb6d00000 rw-
+    7f9cb6d00000-7f9cb6e00000 rw-
+    7f9cb6e00000-7f9cb6f00000 rw-
+    7f9cb6f00000-7f9cb7000000 rw-
+    7f9cb7000000-7f9cb7800000 rw-
+    7f9cb7800000-7f9cb8000000 rw-
+    7f9cb8000000-7f9cb8800000 rw-
+    7f9cb8800000-7f9cb8900000 rw-
+    7f9cb8900000-7f9cb89c0000 rw-
+    7f9cb89c0000-7f9cb89f9000 rw-
+    7f9cb8a00000-7f9cb8b00000 rw-
+    7f9cb8b00000-7f9cb8b60000 rw-
+    7f9cb8b60000-7f9cb8b99000 rw-
+    7f9cb8b99000-7f9cb8bb4000 rw-
+    7f9cb8bb4000-7f9cb8bcc000 rw-
+    7f9cb8bcc000-7f9cb8be4000 rw-
+    7f9cb8c00000-7f9cb8d00000 rw-
+    7f9cb8d00000-7f9cb8e00000 rw-
+    7f9cb8e00000-7f9cb8f00000 rw-
+    7f9cb8f00000-7f9cb9000000 rw-
+    7f9cb9000000-7f9cb9100000 rw-
+    7f9cb9100000-7f9cb9200000 rw-
+    7f9cb9200000-7f9cb9271000 rw-
+    7f9cb9271000-7f9cb92e2000 rw-
+    7f9cb92e2000-7f9cb93c3000 rw-
+    7f9cb93c3000-7f9cb9443000 rw-
+    7f9cb9443000-7f9cb95c3000 rw-
+    7f9cb9600000-7f9cb9700000 rw-
+    7f9cb9700000-7f9cb9800000 rw-
+    7f9cb9800000-7f9cb9900000 rw-
+    7ffee334c000-7ffee6b4c000 ---
+    7ffee6b4c000-7ffee734c000 rw-
+    7fff00000000-7fff80000000 r--
+    7fff80000000-7fff805a2000 r--
+    7fff805a2000-7fff80600000 rw-
+    7fff80600000-7fff80800000 rw-
+    7fff80800000-7fff80a00000 rw-
+    7fff80a00000-7fff80c00000 rw-
+    7fff80c00000-7fff80e00000 r--
+    7fff80e00000-7fff81000000 rw-
+    7fff81000000-7fff81200000 rw-
+    7fff81200000-7fff81600000 r--
+    7fff81600000-7fff81800000 rw-
+    7fff81800000-7fff82000000 r--
+    7fff82000000-7fff82200000 rw-
+    7fff82200000-7fff8e400000 r--
+    7fff8e400000-7fff8e600000 rw-
+    7fff8e600000-7fffc0000000 r--
+    7fffc0000000-7fffffe00000 r--
+    7fffffe00000-7fffffe01000 r--
+    7fffffe3e000-7fffffe3f000 r-x
+    [IMPORTANT]
+    Don't forget to include the Crash Report log file under
+    DiagnosticReports directory in bug reports.
+
+
