@@ -74,7 +74,9 @@ class _DatabaseApp extends State<DatabaseApp> {
 
     return Scaffold(
       appBar: AppBar( title: Text(widget.title), ),
-      body: Container(),
+      body: Container(
+
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final todo = await Navigator.of(context).pushNamed('/add') ;
