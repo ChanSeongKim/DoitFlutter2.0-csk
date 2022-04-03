@@ -50,12 +50,14 @@ class _AddTodoApp extends State<AddTodoApp> {
               ),
               ElevatedButton(
                   onPressed: (){
-                    Todo todo = Todo(
-                      title: titleController?.value.text,
-                      content: contentController?.value.text,
-                      active: 0
-                    );
-                    Navigator.of(context).pop( todo );
+                    if( titleController?.value != null  && contentController?.value != null  ){
+                      Todo todo = Todo(
+                          title: titleController?.value.text,
+                          content: contentController?.value.text,
+                          active: 0
+                      );
+                      Navigator.of(context).pop( todo );
+                    }
                   },
                   child: Text('저장하기'),
 

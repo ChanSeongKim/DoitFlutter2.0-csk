@@ -59,6 +59,15 @@ class DatabaseApp extends StatefulWidget {
 }
 
 class _DatabaseApp extends State<DatabaseApp> {
+  Future<List<Todo>>? todoList ;
+
+  @override
+  void initState() {
+    super.initState();
+    todoList = getTodos() ;
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +80,7 @@ class _DatabaseApp extends State<DatabaseApp> {
           final todo = await Navigator.of(context).pushNamed('/add') ;
           if( todo != null){
             _insertTodo( todo as Todo) ;
+            showAlertDialog(context);
           }
         },
         child: const Icon(Icons.add),),
@@ -84,4 +94,47 @@ class _DatabaseApp extends State<DatabaseApp> {
     await database.insert('todos', todo.toMap(),
     conflictAlgorithm: ConflictAlgorithm.replace );
   }
+
+  Future<List<Todo>> getTodos() async {
+    final Database database = await widget.db  ;
+    final List<Map<String, dynamic>> maps = await database.query('todos');
+
+    return List.generate( maps.length, (i){
+      int active = maps[i]['active']== 1 ? 1 : 0 ;
+      return Todo(
+        title: maps[i]['title'].toString(),
+        content: maps[i]['content'].toString(),
+        active: active,
+        id: maps[i]['id']
+      );
+    });
+  }
+
+  showAlertDialog(BuildContext context) {
+    // Create button
+    Widget okButton = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+
+    // Create AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("Simple Alert"),
+      content: Text("This is an alert message."),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
 }
