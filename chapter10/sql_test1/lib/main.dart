@@ -75,7 +75,42 @@ class _DatabaseApp extends State<DatabaseApp> {
     return Scaffold(
       appBar: AppBar( title: Text(widget.title), ),
       body: Container(
-
+        child: Center(
+          child: FutureBuilder(
+            builder: (context, snapshot){
+              switch( snapshot.connectionState){
+                case ConnectionState.none:
+                  return CircularProgressIndicator();
+                case ConnectionState.waiting:
+                  return CircularProgressIndicator();
+                case ConnectionState.active:
+                  return CircularProgressIndicator();
+                case ConnectionState.done:
+                  if( snapshot.hasData){
+                    return ListView.builder(
+                        itemBuilder: (context, index){
+                          Todo todo = (snapshot.data as List<Todo>)[index];
+                          return Card(
+                            child: Column(
+                              children: <Widget>[
+                                Text(todo.title!),
+                                Text(todo.content!),
+                                Text('${todo.active == 1 ? 'true': 'false'}'),
+                              ],
+                            ),
+                          );
+                        },
+                      itemCount: (snapshot.data as List<Todo>).length,
+                    );
+                  }else {
+                    return Text('No Data');
+                  }
+              }
+              return CircularProgressIndicator();
+            },
+            future: todoList,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
@@ -95,6 +130,9 @@ class _DatabaseApp extends State<DatabaseApp> {
     final Database database = await widget.db ;
     await database.insert('todos', todo.toMap(),
     conflictAlgorithm: ConflictAlgorithm.replace );
+    setState(() {
+      todoList = getTodos();
+    });
   }
 
   Future<List<Todo>> getTodos() async {
