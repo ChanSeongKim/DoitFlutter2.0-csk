@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       onCreate: (db, version){
         return db.execute(
           "CREATE TABLE todos(id INTEGER PRIMARY KEY AUTOINCREMENT, "
-              "title Text , content TEXT, active INTEGER"
+              "title Text , content TEXT, active INTEGER)"
         );
       },
       version: 1,
