@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => DatabaseApp( database,  'sqlite demo-19'),
+        '/': (context) => DatabaseApp( database,  'Database Example'),
         '/add': (context) => AddTodoApp(database),
       },
       //home: const DatabaseApp(title: 'sqlite demo--8') ,
@@ -90,7 +90,94 @@ class _DatabaseApp extends State<DatabaseApp> {
                     return ListView.builder(
                         itemBuilder: (context, index){
                           Todo todo = (snapshot.data as List<Todo>)[index];
-                          return Card(
+                            return ListTile(
+                              title: Text(
+                                todo.title!,
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              subtitle: Container(
+                                child: Column(
+                                  children: <Widget>[
+                                    Text(todo.content!),
+                                    Text('Check: ${todo.active == 1 ? 'true' : 'false'}'),
+                                    Container(
+                                      height: 1,
+                                      color: Colors.blue,
+                                    )
+                                  ],
+                                )
+                              ),
+                              onTap: () async {
+                                TextEditingController controller = new TextEditingController(text: todo.content) ;
+                                Todo result = await showDialog (
+                                  context: context,
+                                  builder: (BuildContext context){
+                                    return AlertDialog(
+                                      title: Text('${todo.id} : ${todo.title}'),
+                                      content: TextField(
+                                        controller: controller ,
+                                        keyboardType: TextInputType.text,
+                                      ),
+
+                                        //Text( 'Do you want to check Todo?'),
+                                      actions: <Widget> [
+                                        TextButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              todo.active == 1
+                                                  ? todo.active = 0
+                                                  : todo.active = 1 ;
+                                              todo.content = controller.value.text;
+                                            });
+                                            Navigator.of(context).pop(todo) ;
+                                          },
+                                          child: Text('YES')
+                                        ),
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.of(context).pop(todo);
+                                          },
+                                          child: Text('NO')
+                                        ),
+                                      ]
+                                    );
+                                  }
+
+                                );// showDialog
+                                _updateTodo( result) ;
+                              },
+                              onLongPress: () async {
+                                Todo? result = await showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      title: Text( '${todo.id} : ${todo.title}'),
+                                      content: Text('${todo.content} to delete ? '),
+                                      actions: <Widget>[
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.of(context).pop(todo);
+                                          },
+                                          child: const Text('YES'),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: Text('NO')
+                                        ),
+                                      ],
+                                    );
+                                  }
+                                );
+                                if( result.runtimeType == Todo) {
+                                  _deleteTodo(result!)  ;
+                                }
+
+                              },
+                            );
+                          /*
+                            return Card(
                             child: Column(
                               children: <Widget>[
                                 Text(todo.title!),
@@ -98,7 +185,8 @@ class _DatabaseApp extends State<DatabaseApp> {
                                 Text('${todo.active == 1 ? 'true': 'false'}'),
                               ],
                             ),
-                          );
+                          );*/
+
                         },
                       itemCount: (snapshot.data as List<Todo>).length,
                     );
@@ -135,6 +223,28 @@ class _DatabaseApp extends State<DatabaseApp> {
     });
   }
 
+  void _updateTodo(Todo todo) async {
+    final Database database = await widget.db ;
+    await database.update(
+      'todos',
+      todo.toMap(),
+      where: 'id=?',
+      whereArgs: [todo.id],
+    );
+    setState(() {
+      todoList = getTodos();
+    });
+  }
+
+  void _deleteTodo(Todo todo) async {
+
+    final Database database = await widget.db ;
+    await database.delete('todos', where: 'id=?' , whereArgs: [todo.id]);
+    setState(() {
+      todoList = getTodos() ;
+    });
+
+  }
   Future<List<Todo>> getTodos() async {
     final Database database = await widget.db  ;
     final List<Map<String, dynamic>> maps = await database.query('todos');
@@ -150,6 +260,7 @@ class _DatabaseApp extends State<DatabaseApp> {
     });
   }
 
+  // Dialog test ---
   showAlertDialog(BuildContext context) {
     // Create button
     Widget okButton = FlatButton(
