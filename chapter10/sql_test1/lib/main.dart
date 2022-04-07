@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:sql_test1/clearList.dart';
 import 'addTodo.dart';
 import 'todo.dart';
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => DatabaseApp( database,  'Database Example'),
         '/add': (context) => AddTodoApp(database),
+        '/clear': (context) => ClearListApp(database),
       },
       //home: const DatabaseApp(title: 'sqlite demo--8') ,
       //const MyHomePage(title: 'sql_example Flutter Home Page'),
@@ -73,7 +75,24 @@ class _DatabaseApp extends State<DatabaseApp> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar( title: Text(widget.title), ),
+      appBar: AppBar(
+        title: Text(widget.title),
+        actions: <Widget>[
+          TextButton(
+              onPressed: () async {
+                await Navigator.of(context).pushNamed('/clear');
+                setState(() {
+                  todoList = getTodos() ;
+                });
+              },
+              child: Text(
+                'Tasks completed',
+                style: TextStyle(color: Colors.white),
+              )
+          )
+        ],
+
+      ),
       body: Container(
         child: Center(
           child: FutureBuilder(
@@ -147,7 +166,8 @@ class _DatabaseApp extends State<DatabaseApp> {
                                 _updateTodo( result) ;
                               },
                               onLongPress: () async {
-                                Todo? result = await showDialog(
+                                //Todo? result = await showDialog(
+                                Todo result = await showDialog(
                                   context: context,
                                   builder: (BuildContext context) {
                                     return AlertDialog(
@@ -171,7 +191,7 @@ class _DatabaseApp extends State<DatabaseApp> {
                                   }
                                 );
                                 if( result.runtimeType == Todo) {
-                                  _deleteTodo(result!)  ;
+                                  _deleteTodo(result)  ;
                                 }
 
                               },
