@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'people.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AnimationApp(),
+      home: const AnimationApp(title: 'animation example'),
     );
   }
 }
@@ -29,6 +30,21 @@ class AnimationApp extends StatefulWidget {
 }
 
 class _AnimationApp extends State<AnimationApp> {
+  List<People> peoples = new List.empty(growable: true);
+  int current = 0 ;
+
+  @override
+  void initState() {
+    peoples.add( People('스미스', 180, 92 ));
+    peoples.add( People('메리', 162, 55 ));
+    peoples.add( People('존', 177, 75 ));
+    peoples.add( People('바트', 130, 40 ));
+    peoples.add( People('콘', 194, 140 ));
+    peoples.add( People('디디', 100, 80 ));
+    super.initState();
+
+
+  }
 
 
   @override
