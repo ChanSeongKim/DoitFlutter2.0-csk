@@ -23,7 +23,7 @@ class _ClearListApp extends State<ClearListApp> {
   Widget build (BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tasks cleared'),
+        title: Text('완료한일'),
       ),
       body: Container(
         child: Center(
