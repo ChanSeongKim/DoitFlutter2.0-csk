@@ -11,7 +11,7 @@ class ClearListApp extends StatefulWidget {
 }
 
 class _ClearListApp extends State<ClearListApp> {
-  Future<Listr<Todo>>? clearList ;
+  Future<List<Todo>>? clearList ;
 
   @override
   void initState() {
@@ -50,7 +50,7 @@ class _ClearListApp extends State<ClearListApp> {
                                   Text(todo.content!),
                                   Container(
                                     height: 1,
-                                    color: Colors.blue, ,
+                                    color: Colors.blue,
                                   )
                                 ],
                               )
@@ -63,11 +63,51 @@ class _ClearListApp extends State<ClearListApp> {
               }
               return Text('No data');
             },
-            future: clearList ;
+            future: clearList ,
           )
         )
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final result = await showDialog(
+            context: context ,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text('Deleting completed tasks'),
+                content: Text('Delete all tasks completed? '),
+                actions: <Widget> [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop(true);
+                    },
+                    child: Text('YES')
+                  ),
+                  TextButton(
+                    onPressed: (){
+                      Navigator.of(context).pop(false);
+                    },
+                    child: Text('NO')
+                  ),
+                ]
+              );
+            }
+          ); //showDialog
+          if( result == true){
+            _removeAllTodos() ;
+          }
+        },
+        child: Icon(Icons.remove),
+      ),
+
     );
+  }
+
+  void _removeAllTodos() async {
+    final Database database = await widget.database;
+    database.rawDelete('delete from todos where active=1');
+    setState(() {
+      clearList = getClearList() ;
+    });
   }
 
   Future<List<Todo>> getClearList() async {

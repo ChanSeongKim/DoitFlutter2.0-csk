@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -86,7 +85,7 @@ class _DatabaseApp extends State<DatabaseApp> {
                 });
               },
               child: Text(
-                'Tasks completed',
+                'Tasks completed>>',
                 style: TextStyle(color: Colors.white),
               )
           )
@@ -163,7 +162,9 @@ class _DatabaseApp extends State<DatabaseApp> {
                                   }
 
                                 );// showDialog
+
                                 _updateTodo( result) ;
+
                               },
                               onLongPress: () async {
                                 //Todo? result = await showDialog(
@@ -220,18 +221,41 @@ class _DatabaseApp extends State<DatabaseApp> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          final todo = await Navigator.of(context).pushNamed('/add') ;
-          if( todo != null){
-            _insertTodo( todo as Todo) ;
-            showAlertDialog(context);
-          }
-        },
-        child: const Icon(Icons.add),),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-
+      floatingActionButton: Column(
+        children: <Widget>[
+          FloatingActionButton(
+            onPressed: () async {
+              final todo = await Navigator.of(context).pushNamed('/add') ;
+              if( todo != null){
+                _insertTodo( todo as Todo) ;
+                //showAlertDialog(context);// test
+              }
+            },
+            heroTag: null ,
+            child: const Icon(Icons.add),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          FloatingActionButton(
+              onPressed: () async {
+                _allUpdate();
+              },
+            heroTag: null,
+            child: Icon(Icons.update),
+              ),
+        ],
+        mainAxisAlignment: MainAxisAlignment.end,
+      )
     );
+  }
+
+  void _allUpdate() async {
+    final Database database = await widget.db ;
+    await database.rawUpdate('update todos set active=1 where active=0');
+    setState(() {
+      todoList = getTodos();
+    });
   }
 
   void _insertTodo(Todo todo )  async {
