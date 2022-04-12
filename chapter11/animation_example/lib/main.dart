@@ -53,7 +53,79 @@ class _AnimationApp extends State<AnimationApp> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(width: 100, child: Text('NAME: ${peoples[current].name}')),
+                    AnimatedContainer(
+                      duration: Duration(seconds: 2),
+                      curve: Curves.bounceIn,
+                      color: Colors.amber,
+                      child: Text(
+                        'Height ${peoples[current].height}',
+                        textAlign: TextAlign.center,
+                      ),
+                      width: 50 ,
+                      height: peoples[current].height,
+                    ),
+                    AnimatedContainer(
+                      duration: Duration(seconds: 2),
+                      curve: Curves.easeInCubic,
+                      color: Colors.blue,
+                      child: Text(
+                        'Weight: ${peoples[current].weight}',
+                        textAlign: TextAlign.center,
+                      ),
+                      width: 50,
+                      height: peoples[current].weight,
+                    ),
+                    AnimatedContainer(
+                      duration: Duration(seconds: 2),
+                      curve: Curves.linear,
+                      color: Colors.pinkAccent,
+                      child: Text(
+                        'bmi ${peoples[current].bmi.toString().substring(0,2)}',
+                        textAlign: TextAlign.center,
+                      ),
+                      width: 50,
+                      height: peoples[current].bmi,
+                    )
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+
+                ),
+                height: 200,
+              ),
+              ElevatedButton(
+                  onPressed:  () {
+                    setState(() {
+                      if( current < peoples.length -1){
+                        current++ ;
+                      }
+                    });
+                  },
+                  child: Text('Next'),
+              ),
+              ElevatedButton(
+                onPressed:  () {
+                  setState(() {
+                    if( current > 0 ){
+                      current-- ;
+                    }
+                  });
+                },
+                child: Text('Prev'),
+              ),
+            ],
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+        ),
+      ),
     );
   }
 }
