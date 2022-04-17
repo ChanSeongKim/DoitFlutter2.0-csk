@@ -32,7 +32,7 @@ class _IntroPage extends State<IntroPage> {
           child: Column(
             children: <Widget>[
               Text('애니메이션 앱'),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SaturnLoading()
