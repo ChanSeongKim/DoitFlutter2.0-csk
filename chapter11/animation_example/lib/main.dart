@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'people.dart';
 import 'secondPage.dart';
+import 'intro.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AnimationApp(title: 'animation example'),
+      home: IntroPage() ,
+        //const AnimationApp(title: 'animation example'),
     );
   }
 }
