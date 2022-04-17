@@ -21,7 +21,7 @@ class _IntroPage extends State<IntroPage> {
 
   onDoneLoading() async {
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) =>const AnimationApp(title: '2-intro animation')));
+        .pushReplacement(MaterialPageRoute(builder: (context) =>const AnimationApp(title: '3-intro animation')));
   }
 
   @override
