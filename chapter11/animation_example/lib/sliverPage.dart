@@ -18,8 +18,42 @@ class _SliverPage extends State<SliverPage>{
               background: Image.asset('repo/images/sunny.png'),
             ),
             backgroundColor: Colors.deepOrangeAccent,
-          )
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              // place to put Widget
+              customCard('1'),
+              customCard('2'),
+              customCard('3'),
+              customCard('4'),
+            ]),
+          ),
+          SliverGrid(
+            delegate: SliverChildListDelegate([
+              customCard('1'),
+              customCard('2'),
+              customCard('3'),
+              customCard('4'),
+              //place to put widget2
+            ]),
+            gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          ),
         ],
+      )
+    );
+  }
+
+  Widget customCard(String text){
+    return Card(
+      child: Container(
+        height: 120,
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle( fontSize: 40),
+          ),
+        )
       )
     );
   }
