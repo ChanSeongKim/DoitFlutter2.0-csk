@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'people.dart';
 import 'secondPage.dart';
 import 'intro.dart';
+import 'sliverPage.dart';
 
 
 void main() {
@@ -156,6 +157,13 @@ class _AnimationApp extends State<AnimationApp> {
                     ),
                   ),
               ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SliverPage() )
+                    );
+                  },
+                  child:  Text('Page move'))
 
             ],
             mainAxisAlignment: MainAxisAlignment.center,
