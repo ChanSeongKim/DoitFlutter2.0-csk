@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "720352665979",
+    "project_id": "example-e5233",
+    "storage_bucket": "example-e5233.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720352665979:android:893837675de9f1c247ddde",
+        "android_client_info": {
+          "package_name": "com.rollcake.firebase_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720352665979-m2jfakdc8m4ff10118apo7ra9q674b81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVYUeg9ZVFKzG6fWxghtByBfQF-u_OENY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720352665979-m2jfakdc8m4ff10118apo7ra9q674b81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
