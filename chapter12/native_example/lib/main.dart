@@ -1,3 +1,4 @@
+import 'sendDataExample.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: NativeApp(),
+        home: NativeApp() ,
+        //SendDataExample(),
+        // NativeApp(),
       );
     }
   }
@@ -48,6 +51,8 @@ class NativeApp extends StatefulWidget {
 
 class _NativeApp extends State<NativeApp> {
   static const platform = const MethodChannel('com.flutter.dev/info') ;
+  static const platform3 = const MethodChannel('com.flutter.dev/dialog');
+
   String _deviceInfo = 'Unknown info' ;
 
   @override
@@ -58,9 +63,19 @@ class _NativeApp extends State<NativeApp> {
       ),
       body: Container(
         child: Center(
-          child: Text(
-            _deviceInfo,
-            style: TextStyle(fontSize: 30),
+          child: Column(
+            children: [
+              Text(
+                _deviceInfo,
+                style: TextStyle(fontSize: 30),
+              ),
+              TextButton(
+                onPressed: () {
+                  _showDialog();
+                },
+                child: Text('네이티브 창 열기')
+              )
+            ],
           ),
         ),
       ),
@@ -85,4 +100,11 @@ class _NativeApp extends State<NativeApp> {
       _deviceInfo = deviceInfo ;
     });
   }
+
+  Future<void> _showDialog() async {
+    try {
+      await platform3.invokeMethod('showDialog');
+    } on PlatformException catch(e) {}
+  }
+
 }
