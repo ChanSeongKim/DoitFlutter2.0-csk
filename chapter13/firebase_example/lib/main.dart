@@ -1,7 +1,7 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
-
+import 'tabsPage.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       navigatorObservers: <NavigatorObserver>[observer],
-      home: const FirebaseApp(
+      home:  FirebaseApp(
         analytics: analytics,
         observer: observer,
           ),
@@ -55,20 +55,20 @@ class _FirebaseAppState extends State<FirebaseApp>{
     });
   }
 
-  Future<void> _sendAnaluyticsEvent() async {
+  Future<void> _sendAnalyticsEvent() async {
     //애널리틱스의 logEvent를 호출해 test_event라는 키값으로 데이터 저장
     await analytics.logEvent(
         name: 'test_event',
         parameters: <String, dynamic> {
           'string': 'hello flutter',
           'int': 100 ,
-        }
+        },
         );
-    seetMessage('Analytics 보내기 성공');
+    setMessage('Analytics 보내기 성공');
 
   }
 
-  @overrid
+  @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
@@ -78,8 +78,8 @@ class _FirebaseAppState extends State<FirebaseApp>{
         child: Column(
           children: <Widget>[
             ElevatedButton(
-                onPressed: _sendAnaluyticsEvent,
-                child: Text('테스트 ')
+                onPressed: _sendAnalyticsEvent,
+                child: const Text('테스트 '),
             ),
             Text(_message, style: const TextStyle(color: Colors.blueAccent),),
           ],
@@ -87,7 +87,17 @@ class _FirebaseAppState extends State<FirebaseApp>{
         ),
       ),
       floatingActionButton:
-      FloatingActionButton(child: const Icon(Icons.tab),onPressed: (){},)
+      FloatingActionButton(
+        child: const Icon(Icons.tab),
+        onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute<TabsPage>(
+            settings: RouteSettings(name: '/tab'),
+            builder: (BuildContext context){
+              return TabsPage(observer);
+            }
+          ));
+        },
+      ),
     );
   }
 
