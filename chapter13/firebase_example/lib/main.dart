@@ -1,7 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
 import 'tabsPage.dart';
+import 'memoPage.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,11 +28,61 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       navigatorObservers: <NavigatorObserver>[observer],
-      home:  FirebaseApp(
+      home:
+        FutureBuilder(
+          future: Firebase.initializeApp(),
+          builder: (context, snapshot){
+            if(snapshot.hasError) {
+              return Center(
+                child: Text('Error'),
+              );
+            }
+
+            //선언완료후 표시할 위젯
+            if(snapshot.connectionState == ConnectionState.done){
+              _initFirebaseMessaging(context);
+              return MemoPage() ;
+            }
+
+            //선언되는 동안 표시할 위젯
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          },
+        )
+      // [2] MemoPage(),
+
+/* //[1]
+        FirebaseApp(
         analytics: analytics,
         observer: observer,
-          ),
+          ),*/
     );
+  }
+
+  _initFirebaseMessaging(BuildContext context) {
+    FirebaseMessaging.onMessage.listen(RemoteMessage event) {
+      print(event.notification!.title);
+      print(event.notification!.body);
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text("알림"),
+            content: Text(event.notification!.body!),
+            actions: [
+              TextButton(
+                child: Text("OK"),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+      );
+    }
+
   }
 }
 
@@ -72,7 +126,7 @@ class _FirebaseAppState extends State<FirebaseApp>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text('Firebase Example'),
+        title: const Text('Firebase Example'),
       ),
       body: Center(
         child: Column(
