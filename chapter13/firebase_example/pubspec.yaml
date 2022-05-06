@@ -33,8 +33,6 @@ dependencies:
   firebase_analytics: ^8.1.1  #파이어베이스 애널리틱스 패키지, firebase analytics package
   firebase_database: ^7.1.0   # 파이어베이스 데이터베이스 패키지
   firebase_messaging: ^10.0.1 # 파이어베이스 메시징 패키지
-  firebase_messaging_platform_interface: 3.1.6
-
 
 
   # The following adds the Cupertino Icons font to your application.

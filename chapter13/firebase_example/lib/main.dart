@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'tabsPage.dart';
 import 'memoPage.dart';
@@ -9,9 +10,6 @@ import 'memoPage.dart';
 void main() {
   runApp(const MyApp());
 }
-
-
-
 
 class MyApp extends StatelessWidget {
 
@@ -33,7 +31,7 @@ class MyApp extends StatelessWidget {
           future: Firebase.initializeApp(),
           builder: (context, snapshot){
             if(snapshot.hasError) {
-              return Center(
+              return const Center(
                 child: Text('Error'),
               );
             }
@@ -61,9 +59,13 @@ class MyApp extends StatelessWidget {
   }
 
   _initFirebaseMessaging(BuildContext context) {
-    FirebaseMessaging.onMessage.listen(RemoteMessage event) {
-      print(event.notification!.title);
-      print(event.notification!.body);
+
+    FirebaseMessaging.onMessage.listen((RemoteMessage event) {
+      if (kDebugMode) { //2022-05-07, cskimair , for debugging mode
+        print(event.notification!.title);
+        print(event.notification!.body);
+      }
+
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
         }
       );
     }
-
+    );
   }
 }
 
