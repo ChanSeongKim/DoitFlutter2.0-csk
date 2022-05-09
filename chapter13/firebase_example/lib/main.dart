@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
             //선언완료후 표시할 위젯
             if(snapshot.connectionState == ConnectionState.done){
               _initFirebaseMessaging(context);
+              _getToken();
               return MemoPage() ;
             }
 
@@ -85,6 +86,11 @@ class MyApp extends StatelessWidget {
       );
     }
     );
+  }
+
+  _getToken() async {
+    FirebaseMessaging messaging= FirebaseMessaging.instance;
+    print("messaging.getToken(), ${await messaging.getToken()}");
   }
 }
 
