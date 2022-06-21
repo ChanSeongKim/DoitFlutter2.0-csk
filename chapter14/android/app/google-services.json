@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "803908958377",
+    "project_id": "modutour-9ce74",
+    "storage_bucket": "modutour-9ce74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803908958377:android:331bd50d358dab5cf291b8",
+        "android_client_info": {
+          "package_name": "com.editech.modutour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803908958377-08r4c06evirgnftnvn5slc72soapl0v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRnPkBQEssjkBZPWDU53wcTbpfeEqQsHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803908958377-08r4c06evirgnftnvn5slc72soapl0v9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
